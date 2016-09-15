@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+    Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <script type="text/javascript" src="js/jquery-mobile.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--<link rel="stylesheet" href="css/framework7.ios.min.css">-->
+    <!--<link rel="stylesheet" href="css/framework7.ios.colors.min.css">-->
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" href="css/my-app.css">
+
+
+    <link rel="stylesheet" href="css/framework7.upscroller.css">
+    <script src="js/framework7.upscroller.js"></script>
+    <script type="application/javascript" src="js/fastclick.js"></script>
+    <script>
+        $(function() {
+            FastClick.attach(document.body);
+        });
+    </script>
+
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <title>Pausiber.xyz</title>
+</head>
+<body >
+
+
+<div class="notifications list-block media-list">
+    <ul>
+
+        <!-- Single notification item -->
+        <li class="notification-item">
+
+        </li>
+
+    </ul>
+</div>
+
+<!--Login-->
+<!-- <div class="login-screen"> -->
+    <!-- <div class="view"> -->
+        <!-- <div class="page"> -->
+            <!-- <div class="page-content login-screen-content"> -->
+
+
+                        <!-- <div class="navbar"> -->
+                            <!-- <div class="navbar-inner"> -->
+                                <!-- <div class="center">Paü Siber</div> -->
+                                <!-- <div class="subnavbar"> -->
+                                    <!-- Buttons row as tabs controller in Subnavbar-->
+                                    <!-- <div class="buttons-row"> -->
+                                        <!-- Link to 1st tab, active -->
+                                        <!-- <a href="#kayit_ol" class="button active tab-link">Kayıt</a> -->
+                                        <!-- Link to 2nd tab -->
+                                        <!-- <a href="#giris_yap" class="button tab-link">Giriş</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- Tabs swipeable wrapper, required to switch tabs with swipes -->
+                        <!-- <div class="tabs-swipeable-wrap"> -->
+                            <!-- Tabs, tabs wrapper -->
+                            <!-- <div class="tabs"> -->
+                                <!-- Tab 1, active by default -->
+                                <!-- <div id="kayit_ol" class="page-content tab active">
+                                    <div class="content-block">
+
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <form method="post" id="kayit_formu">
+                                            <div class="list-block">
+                                                <ul>
+                                                    <li class="item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title label">Kullanıcı Adı</div>
+                                                            <div class="item-input">
+                                                                <input type="text" name="fos_user_registration_form[username]" placeholder="Kullanıcı adınız..">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title label">E-Posta</div>
+                                                            <div class="item-input">
+                                                                <input type="text" name="fos_user_registration_form[email]" placeholder="bilgi@gider.xyz">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title label">Şifre</div>
+                                                            <div class="item-input">
+                                                                <input type="password" name="fos_user_registration_form[plainPassword][first]" placeholder="SizinGizliŞifreniz">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title label">Şifre Tekrar</div>
+                                                            <div class="item-input">
+                                                                <input type="password" name="fos_user_registration_form[plainPassword][second]" placeholder="SizinGizliŞifreniz">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </form>
+                                        <div class="list-block">
+                                            <ul>
+                                                <li><a href="#" class="item-link list-button kayit_ol ">Kayıt Ol</a></li>
+                                            </ul>
+                                            <div class="list-block-label">
+                                                <p>Kayıt ol butonuna bastığınızda sizin için herşeyi hazırlamış olacağız.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div> -->
+                                <!-- Tab 2 -->
+                                <!-- <div id="giris_yap" class="page-content tab">
+                                    <div class="content-block">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <form method="post" id="giris_formu">
+                                            <div class="list-block">
+                                                <ul>
+                                                    <li class="item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title label">Kullanıcı Adı</div>
+                                                            <div class="item-input">
+                                                                <input type="text" name="username" placeholder="Kullanıcı adınız..">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title label">Şifre</div>
+                                                            <div class="item-input">
+                                                                <input type="password" name="password" placeholder="SizinGizliŞifreniz">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </form>
+                                        <div class="list-block">
+                                            <ul>
+                                                <li><a href="#" class="item-link list-button giris_yap ">Giriş yap</a></li>
+                                            </ul>
+                                            <div class="list-block-label">
+                                                <p>Giriş yap butonuna bastığınızda sizin için herşeyi hazırlamış olacağız.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+<!--Login-->
+
+<!-- Layout start-->
+<!-- Status bar overlay for full screen mode (PhoneGap) -->
+<div class="statusbar-overlay"></div>
+<!-- First, we need to add Panel's overlay that will overlays app while panel is opened -->
+<div class="panel-overlay"></div>
+
+<!-- Left Panel with Reveal effect -->
+ <div class="panel panel-left panel-cover">
+   <div class="content-block">
+     <h1>Paü Siber</h1>
+     <div class="row qrcode" style="margin-top:15%">
+       <p>
+         <a href="#qr-code" class="tab-link">Qr Code Göster</a>
+       </p>
+     </div>
+     <div class="row facebook"  style="margin-top:15%">
+
+         <a data-href="https://facebook.com/pausiber" class="sosyal-medya">Paü Siber Facebook</a>
+
+     </div>
+     <div class="row twitter" style="margin-top:15%">
+       <a class="sosyal-medya" data-href="https://twitter.com/siberpau">Paü Siber Twitter </a>
+     </div>
+     <div class="row telegram"  style="margin-top:15%">
+       <a class="sosyal-medya" data-href="https://telegram.me/joinchat/C-95zwmUALPnlDEDeNCLvA">Paü Siber Telegram </a>
+     </div>
+     <!-- Click on link with "close-panel" class will close panel -->
+     <!-- <p><a href="#" class="close-panel">Close me</a></p> -->
+   </div>
+ </div>
+<!-- Views -->
+<div class="views layout-dark">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main theme-yellow">
+        <!-- Tabs, now tabs wrapper is "views" -->
+        <div class="views tabs toolbar-fixed">
+            <!-- Tab 1 - View 1, active by default -->
+            <div id="tab1" class="view tab active">
+
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                          <a href="#" class="open-panel link icon-only">
+                              <i class="icon icon-bars"></i>
+                          </a>
+                        </div>
+                          <!-- <a href="#" class="open-panel">Open Left Panel</a> -->
+                        <div class="center">Paü Siber</div>
+
+                    </div>
+                </div>
+
+                <div class="pages navbar-fixed">
+                    <div data-page="home-1" class="page">
+                        <div class="page-content pull-to-refresh-content">
+
+                          <div class="pull-to-refresh-layer">
+                              <div class="preloader"></div>
+                              <div class="pull-to-refresh-arrow"></div>
+                          </div>
+
+                          <div class="content-block " id="blogIcerik">
+                            <style>
+                              .demo-card-header-pic .card-header {
+                              height: 40vw;
+                              background-size: cover;
+                              background-position: center;
+                              }
+                              .infinite-scroll-preloader {
+                                margin-top:-20px;
+                                margin-bottom: 10px;
+                                text-align: center;
+                              }
+                              .infinite-scroll-preloader .preloader {
+                                width:34px;
+                                height:34px;
+                              }
+                            </style>
+
+
+
+                            <!-- ## my app js içerisinde document on ready de local stroga den oluşturuluyor -->
+                            <!-- <div class="card demo-card-header-pic" id="blog-icerik-">
+                              <div style="background-image:url(https://pbs.twimg.com/profile_banners/762376797635960833/1471388019/1500x500)" valign="bottom" class="card-header color-white no-border">Paü Siber geliyor</div>
+                                <div class="card-content">
+                                  <div class="card-content-inner">
+                                    <p class="color-gray">Posted on January 21, 2015</p>
+                                    <p>Quisque eget vestibulum nulla...</p>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                <a href="#" class="link">Like</a>
+
+                                <a href="#icerik-detay" id="icerik-detay-page" data-detay-id='icerik test icerik 1' class="tab-link active item-link item-content detay-id">Read more</a>
+                                </div>
+                            </div> -->
+                            <!-- Preloader -->
+
+                          </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab3" class="view tab">
+              <div class="navbar">
+                  <div class="navbar-inner">
+                      <div class="left">
+                        <a href="#" class="open-panel link icon-only">
+                            <i class="icon icon-bars"></i>
+                        </a>
+                      </div>
+
+                        <!-- <a href="#" class="open-panel">Open Left Panel</a> -->
+                      <div class="center">Paü Siber & Etkinlik Habercisi</div>
+
+                  </div>
+              </div>
+
+                <div class="pages navbar-fixed">
+                    <div data-page="home-3" class="page">
+                        <div class="page-content pull-to-refresh-content">
+
+                            <div class="pull-to-refresh-layer">
+                                <div class="preloader"></div>
+                                <div class="pull-to-refresh-arrow"></div>
+                            </div>
+                            <div class="content-block">
+
+                              <div class="list-block media-list">
+                                <ul class="etkinlik-liste">
+                                  <!-- <li>
+                                    <a href="#" class="item-link item-content">
+                                      <div class="item-inner">
+                                        <div class="item-title-row">
+                                          <div class="item-title">Hacktrick</div>
+                                          <div class="item-after">01.01.2017</div>
+                                        </div>
+                                        <div class="item-subtitle">Eskişehir</div>
+                                        <div class="item-text">Lorem ipsum dolor sit amet...</div>
+                                      </div>
+                                    </a>
+                                  </li> -->
+
+                                </ul>
+                              </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3 - View 4 PROFİL -->
+
+
+            <div id="icerik-detay" class="view tab">
+              <div class="navbar">
+                  <div class="navbar-inner">
+                    <div class="left sliding"><a href="#tab1" id="1" class="tab-link icerik-detay-back" style="width:50px;"><i class="icon icon-back"></i></a></div>
+                      <div class="center">Paü Siber</div>
+                      <div class="right">
+                        <a href="#" class="open-panel link icon-only">
+                            <i class="icon icon-bars"></i>
+                        </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="pages">
+                <div data-page="icerik detay" class="page">
+                  <div class="page-content">
+                    <div class="content-block">
+                      <div class="content-block-inner">
+                        <h1 class="detay-baslik"></h1>
+                        <p class="detay-icerik"></p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="etkinlik-detay" class="view tab">
+              <div class="navbar">
+                  <div class="navbar-inner">
+                    <div class="left sliding"><a href="#tab3" id="3" class="tab-link etkinlik-detay-back" style="width:50px;"><i class="icon icon-back"></i></a></div>
+                      <div class="center">Paü Siber</div>
+                      <div class="right">
+                        <a href="#" class="open-panel link icon-only">
+                            <i class="icon icon-bars"></i>
+                        </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="pages">
+                <div data-page="etkinlik detay" class="page">
+                  <div class="page-content">
+                    <div class="content-block">
+                      <div class="content-block-inner">
+                        <h1 class="etkinlik-baslik"></h1>
+                        <p class="etkinlik-icerik"></p>
+                        <div class="etkinlik-tarih"></div>
+                        <div class="etkinlik-saat"></div>
+                        <div class="etkinlik-yer"></div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="qr-code" class="view tab">
+              <div class="navbar">
+                  <div class="navbar-inner">
+                    <div class="left sliding"><a href="#tab1" id="1" class="tab-link icerik-detay-back" style="width:50px;"><i class="icon icon-back"></i></a></div>
+                      <div class="center">Paü Siber</div>
+                      <div class="right">
+                        <a href="#" class="open-panel link icon-only">
+                            <i class="icon icon-bars"></i>
+                        </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="pages">
+                <div data-page="Qr Code" class="page">
+                  <div class="page-content">
+                    <div class="content-block">
+                      <div class="content-block-inner" style="width:100%">
+                        <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=Pa%C3%BC+siber&chld=L|1&choe=UTF-8" alt="" width="100%" />
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="toolbar tabbar">
+                <div class="toolbar-inner">
+                    <!-- <a href="#tab1" id="1" class=" tab-link active icerik-back"><i class="icon fa fa-map-signs fa-2x"></i></a>
+                    <a href="#tab2" id="2"  class=" tab-link soru-back"><i class="icon fa fa-plus-circle fa-2x"></i></a>
+                    <a href="#tab3" id="3" class=" tab-link"><i class="icon fa fa-inbox fa-2x"></i></a>
+                    <a href="#tab4" id="4" class=" tab-link"><i class="icon fa fa-cog fa-2x"></i></a> -->
+                    <a href="#tab1" id="1" class=" tab-link active icerik-back"><i class="icon fa fa-map-signs fa-2x"></i></a>
+                    <!-- <a href="#tab2" id="2"  class=" tab-link soru-back"><i class="icon fa fa-question fa-2x"></i></a> -->
+                    <a href="#tab3" id="3" class=" tab-link etkinlik-back"><i class="icon fa fa-calendar fa-2x"></i></a>
+                    <!-- <a href="#tab4" id="4" class=" tab-link"><i class="icon fa fa-user fa-2x"></i></a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Layout end-->
+<script type="text/javascript" src="cordova.js"></script>
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="js/framework7.min.js"></script>
+
+<script type="text/javascript" src="js/markdown-to-html.min.js"></script>
+
+
+<!-- Path to your app js-->
+<script type="text/javascript" src="js/my-app.js"></script>
+
+
+</body>
+</html>

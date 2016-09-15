@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.thelastcodebenders.pausiber" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="SocialMessage">
+        <param name="android-package" value="uk.co.ilee.socialmessage.SocialMessage" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="OneSignalPush">
+        <param name="android-package" value="com.plugin.gcm.OneSignalPush" />
+    </feature>
+    <name>PaüSiber</name>
+    <description>
+        Paü siber topluluğu için geliştirilmiş mobil uygulama
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <splash density="land-hdpi" src="res/screen/android/logo7.png" />
+    <splash density="land-ldpi" src="res/screen/android/logo7.png" />
+    <splash density="land-mdpi" src="res/screen/android/logo7.png" />
+    <splash density="land-xhdpi" src="res/screen/android/logo7.png" />
+    <splash density="port-hdpi" src="res/screen/android/logo7.png" />
+    <splash density="port-ldpi" src="res/screen/android/logo7.png" />
+    <splash density="port-mdpi" src="res/screen/android/logo7.png" />
+    <splash density="port-xhdpi" src="res/screen/android/logo7.png" />
+    <icon density="xhdpi" src="res/icon/android/xhdpi.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="SplashScreenDelay" value="2000" />
+</widget>

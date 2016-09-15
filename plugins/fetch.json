@@ -1,0 +1,42 @@
+{
+    "cordova-plugin-inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-inappbrowser@1.5.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-social-message": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-social-message"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-splashscreen": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-splashscreen@4.0.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "onesignal-cordova-plugin": {
+        "source": {
+            "type": "registry",
+            "id": "onesignal-cordova-plugin"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

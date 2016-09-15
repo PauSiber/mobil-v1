@@ -1,0 +1,27 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.thelastcodebenders.pausiber"
+        },
+        "cordova-plugin-social-message": {
+            "PACKAGE_NAME": "com.thelastcodebenders.pausiber"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.thelastcodebenders.pausiber"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.thelastcodebenders.pausiber"
+        },
+        "onesignal-cordova-plugin": {
+            "PACKAGE_NAME": "com.thelastcodebenders.pausiber"
+        }
+    },
+    "dependent_plugins": {}
+}
