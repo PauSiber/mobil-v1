@@ -43,7 +43,7 @@ $(document).on('click','.tab-link',function(){
     }
     if(id === 'etkinlik-detay-page') {
       var etkinlik_id = $(this).attr('data-etkinlik-id');
-      alert(etkinlik_id);
+      // alert(etkinlik_id);
 
       $.each(etkinlikler, function(index, val) {
         if(val.id == etkinlik_id) {
@@ -304,7 +304,7 @@ ptrContent.on('refresh', function (e) {
                 $.each(data.responseData.feed.entries, function (i, e) {
                   $('#blogIcerik').append(''+
                     '<div class="card demo-card-header-pic" id="blog-icerik-"'+e.link+'>'+
-                      '<div style="background-image:url(https://pbs.twimg.com/profile_banners/762376797635960833/1471388019/1500x500)" valign="bottom" class="card-header color-white no-border">'+e.title+'</div>'+
+                      '<div style="background-color:#Ffc000;" valign="bottom" class="card-header color-white no-border">'+e.title+'</div>'+
                           '<div class="card-content">'+
                               '<div class="card-content-inner">'+
                                   '<p class="color-gray">Posted on '+e.publishedDate+'</p>'+
@@ -347,7 +347,7 @@ ptrContent.on('refresh', function (e) {
                 $('.etkinlik-liste').html('');
                 $.each(data.etkinlikler, function(index, value) {
                   $('.etkinlik-liste').append('<li>'+
-                  '<a href="#" class="item-link item-content">'+
+                  '<a href="#etkinlik-detay" class="item-link item-content tab-link" id="etkinlik-detay-page" data-etkinlik-id="'+value.id+'">'+
                   '<div class="item-inner">'+
                   '<div class="item-title-row">'+
                   '<div class="item-title">'+value.baslik+'</div>'+
